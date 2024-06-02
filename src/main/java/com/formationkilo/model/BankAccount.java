@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
-public class BankAccount {
+public abstract class BankAccount {
 
     private String idAccount=UUID.randomUUID().toString();
 

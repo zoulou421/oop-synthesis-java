@@ -4,6 +4,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.formationkilo.model.BankAccount;
+import com.formationkilo.model.CurrentAccount;
+import com.formationkilo.model.SavingAccount;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,13 +16,13 @@ public class Main {
     public static void main(String[] args) throws JsonProcessingException {
         System.out.println("use of jar testjava-1.0-SNAPSHOT.jar ");
         List<BankAccount> myList = new ArrayList<>();
-        myList.add(new BankAccount());
+        myList.add(new CurrentAccount());
         for (BankAccount a : myList) {
             System.out.println(a.toString());
         }
 
         Map<String, BankAccount> myMap = new HashMap<>();
-        myMap.put("cc1", new BankAccount());
+        myMap.put("cc1", new SavingAccount());
         BankAccount a2 = myMap.get("cc1");
         System.out.println(a2.toString());
         for (String key : myMap.keySet()) {
