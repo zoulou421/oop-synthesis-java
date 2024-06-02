@@ -38,6 +38,9 @@ public class Application {
         //4th option
         allAccounts.forEach(account->System.out.println(account.toString()));
 
+        //5th option
+        allAccounts.forEach(System.out::println);
+
 
 
     }
